@@ -378,7 +378,12 @@ DungeonTrackMap:
 	rts
 .endproc ; DecodeTrackNum
 	
+.ifdef PRG0
+; PRG0 (the first release) has this routine 4 bytes later than PRG1
+.org $9d46
+.else
 .org $9d42
+.endif
 
 	; Convert to a callable function
 .proc StopMusicStub
