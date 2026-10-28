@@ -1,0 +1,32 @@
+// This is the config file used with makeftrom to build lozftdemo
+{
+	ftcfg: "lozft.ftcfg",
+	track_dir: "tracks",
+	input_rom: "lozft.nes",
+	output_rom: "lozftdemo.nes",
+	
+	/*c2_files: [
+	],*/
+	
+	ft_files: [
+		{ArumanaLevel1: "bhop/[2A03] Arumana no Kiseki Level 1, 4 and 6.ftm", swap_square_chans: true},
+		{DwTitle: "Dragon Warrior Title.dnm", swap_square_chans: true},
+		{ff3: "ff3.ftm", swap_square_chans: true},
+		{NethersLament: "Nether's Lament.ftm", swap_square_chans: true},
+		{G4Sortie: "bhop/GIV - Sortie.ftm"},
+	],
+
+	track_map: {
+		Title: "DwTitle",
+		Overworld: "ArumanaLevel1",
+		Dungeon1: "G4Sortie",
+		Dungeon2: "ff3",
+		Dungeon3: "NethersLament",
+		Dungeon4: "G4Sortie",
+		Dungeon5: "ff3",
+		Dungeon6: "NethersLament",
+		Dungeon7: "G4Sortie",
+		Dungeon8: "ff3",
+		Dungeon9: "NethersLament",
+	},
+}

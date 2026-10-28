@@ -1,0 +1,42 @@
+{
+	"module": "ftonly",
+	
+	"bank_size": 0x2000,
+	"num_banks": 0x20,
+	
+	"track_map_tbl_offs": 0x0,
+	"max_tracks": 0x40,
+	"track_names": [
+		"Overworld", // 0
+		"GanonClear", // 1
+		"TriforceFanfare", // 2
+		"ItemFanfare", // 3
+		"Ending", // 4
+		"Dungeon9", // 5
+		"Dungeon1", // 6
+		"Title", // 7
+		"ZeldaFanfare", // 8
+		"GameOver", // 9
+		"Death", // a
+		"Dungeon2", // b
+		"Dungeon3", // c
+		"Dungeon4", // d
+		"Dungeon5", // e
+		"Dungeon6", // f
+		"Dungeon7", // 10
+		"Dungeon8", // 11
+	],
+	
+	"unused_tracks": [[0x12, 0x40]],
+	
+	"ft": {
+		"track_mod_tbl_offs": 0x80,
+		"src_bank_idx": 0xe,
+		"free_ranges": [[0, null]],
+	},
+
+	"free_unique_ranges": [],
+	
+	"free_banks": [[0xf, 0x1e]],
+	"free_bank_base": 0xa000,
+}
