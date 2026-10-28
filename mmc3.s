@@ -22,7 +22,7 @@ ReadCtlrs := $e62d
 .segment "HEADER"
 
 .org 6
-	.byte $40 ; MMC3
+	.byte $42 ; MMC3 + battery backup
 
 
 ; For some reason every bank has its own copy of the bank switching functions. Even worse, a couple functions in bank 1 call them. Get rid of the calls so the space can be reclaimed.
