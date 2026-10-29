@@ -22,8 +22,10 @@ MIRROR_HORIZONTAL = 1
 
 DISABLE_PRG_RAM_PROTECTION = $80
 
-; Must be defined
+.global Switch16kBank
+
+; Must be defined by the host
 .globalzp Mmc3BankTemp
-.global Switch16kBank, ResetHdlrPart3, UpdateSound
+.global ResetHdlrEndHook, UpdateSoundHook
 
 .endif ; .ifndef MMC3_INC

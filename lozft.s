@@ -36,6 +36,13 @@ CurNatTrack := $609
 
 UpdateNatSound := $9825
 
+.ifndef LOZFT_EXT_HOST
+	ResetHdlrEndHook := LozftResetHdlr
+	UpdateSoundHook := UpdateSound
+.else
+	.global LozftResetHdlr, UpdateSound
+.endif
+
 
 .segment "ZEROPAGE"
 
@@ -77,23 +84,23 @@ FtAddrToPlay: .word 0
 .segment "BANK7"
 
 .reloc
-.proc ResetHdlrPart3
+.proc LozftResetHdlr
 	lda #<.bank(CopyGlobalCodeToSram)
 	jsr Switch16kBank
 
 	jsr CopyGlobalCodeToSram
 
-	lda #<.bank(ResetHdlrPart4)
+	lda #<.bank(Initialize)
 	jsr Switch16kBank
 
-	jmp ResetHdlrPart4
+	jmp Initialize
 .endproc
 	
 
 .segment "BANK5"
 
 .reloc
-.proc ResetHdlrPart4
+.proc Initialize
 	lda #NOT_PLAYING
 	sta MusicState
 	sta NextMusicState

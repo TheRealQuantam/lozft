@@ -262,7 +262,7 @@ IsrNmi:
 	jsr Switch16kBank
 	jsr NmiHdlrPart2
 	
-	jsr UpdateSound
+	jsr UpdateSoundHook
 	
 	INC $15
 	LDA $11
@@ -302,7 +302,7 @@ FREE_UNTIL $e580
 	
 	jsr ResetHdlrPart2
 
-	jsr ResetHdlrPart3
+	jsr ResetHdlrEndHook
 
 	LDA $FF
 	ORA #$A0
